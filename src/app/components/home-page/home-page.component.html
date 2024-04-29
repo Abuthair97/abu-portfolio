@@ -1,0 +1,134 @@
+ <div class="container">
+   <div class="row">
+     <div class="col-12 col-md-4 m-auto text-center">
+       <div class="leftSide">
+         <img class="image" src="./assets/AbuthairImage.png" alt="" srcset="">
+       </div>
+     </div>
+     <div class="col-12  m-auto pt-4 col-md-4">
+       <div class="about">
+         <h2 class="name">
+           <span class="wave" aria-hidden="true">👋 </span>
+           <span>   Hi , I'm Abuthair</span>
+         </h2>
+
+         <p  class="content ">
+           <span></span>
+         </p>
+         <p class="para">Enthusiastic engineering graduate with basic knowledge in coding and design. Proficient in Java, HTML 5, JavaScript, CSS and Angular. Ability to learn new software and technologies quickly. Capability to work in teams by providing valuable support.</p>
+         <a routerLink="about"  class="link"><span>Learn more about me</span>
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-12 col-md-4 m-auto  pt-5">
+       <div class="p-2">
+         💻<a routerLink="/project" class="link"><span>Projects</span><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+         <p class="subtitle">My favorite Projects</p>
+         <div class="display">
+           @for(pro of projectshow ; track pro.id){
+             <div >
+               <a href={{pro.url}} target="_blank" class="projectdisplay">
+                 <img src={{pro.logo}} alt="">
+               </a>
+               <div class="projecttopic">{{pro.simpleName}}</div>
+             </div>
+           }
+         </div>
+
+       </div>
+     </div>
+     <div class="col-12 col-md-4  m-auto pt-5 ">
+       <div class="p-2">
+         🧬 <a routerLink="/life" class="link"><span>Life</span>
+         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+         <p class="subtitle">A small infomation about me</p>
+       </div>
+
+       <div class="shadow p-3 rounded-4 ">
+         <div class="d-flex flex-row ">
+           <span>🎂</span>
+           <div>
+             <span><strong style="font-weight: 500; margin: 0px 13px; ">24</strong>years old</span>
+             <p class="subtitle "> Date of Birth<strong style="font-weight: 500; margin: 0px 13px; ">11-01-2000</strong></p>
+           </div>
+         </div>
+         <div  class="d-flex flex-row ">
+           <span>📍</span>
+           <div>
+             <span style="margin: 0px 13px;" >Currently in Chennai , <strong>India</strong></span>
+             <p class="subtitle "> Time zone in India <strong style="font-weight: 500; margin: 0px 13px; ">(GMT+5:30)</strong></p>
+           </div>
+         </div>
+         <div class="d-flex flex-row " >
+           <span>👨‍💻</span>
+           <div>
+             @if(employeement == false){
+               <span  style="margin: 0px 13px;">Currently  UnEmployed </span>
+               <p class="subtitle "> Open to work<strong style="font-weight: 500; margin: 0px 13px;">Full stack Developer</strong></p>
+             }
+             @else{
+               <span  style="margin: 0px 13px;" >Currently  Employed  at <strong>{{office}}</strong></span>
+               <p class="subtitle ">At <strong style="font-weight: 500; margin: 0px 13px; ">{{position}}</strong></p>
+             }
+           </div>
+         </div>
+         <div class="d-flex flex-row ">
+           <span>🏏</span>
+           <div>
+             <span   style="margin: 0px 13px;" >Ex Professional Cricketer</span>
+             <p class="subtitle ">3 division player </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-12  col-md-4 m-auto pt-5 ">
+       <div class="p-2">
+         🤹🏻 <a routerLink="/project" class="link"><span>Skills</span>
+         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+         <p class="subtitle">Learning never exhausts the mind.</p>
+
+         <div class="shadow rounded-4">
+           @for(skills of skillslist; track skills.title){
+             <div class="d-flex flex-row justify-content-around p-2">
+               <div class=" text-center">
+                 <span>{{skills.title}}</span>
+               </div>
+               <div class="text-center subtitle">
+                 {{skills.Subtitle}}
+               </div>
+             </div>
+           }
+         </div>
+       </div>
+     </div>
+     <div class="col-12  d-md-none m-auto pt-5 " >
+       <div class="p-2">
+         <a href="" class="link"><span>Most Used Language </span>
+         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+         <div class="text-center pt-4" >
+           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abuthair97&theme=light&hide_border=false&include_all_commits=false&count_private=false&layout=compact">
+         </div>
+       </div>
+
+     </div>
+     <div class="col-12  d-none d-md-block col-md-4 m-auto pt-5" >
+       <div >
+         🎥  <a href="" class="link"><span>Video Intro </span>
+           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+         <p class="subtitle">A Clip of me playing cricket.</p>
+         <video width="100%"  controls>
+           <source src="./assets/cricketvideo.mp4" type="video/mp4">
+
+           Your browser does not support HTML video.
+         </video>
+       </div>
+     </div>
+   </div>
+
+ </div>
+

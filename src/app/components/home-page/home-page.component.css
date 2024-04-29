@@ -1,0 +1,105 @@
+.image{
+  height: 250px;
+  width:  66.666667%;
+  border-radius: 50%;
+  border-width: 10px;
+  border-color: black
+}
+.content{
+  margin-left: 1.875rem;
+
+}
+.display{
+  display: grid ;
+  grid-template-columns : repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+
+}
+.subtitle{
+  color: #6B7280;
+}
+
+
+.projectdisplay{
+  display: flex;
+  aspect-ratio: 1 / 1;
+  padding: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  opacity: 1;
+}
+.projecttopic{
+  margin-top: 10px;
+}
+.content span::before{
+  content: '';
+  color: #aa3939;
+  font-size: 23px;
+  font-weight: bold;
+  animation: profile 5s infinite;
+}
+@keyframes profile {
+  0% { content: '  Software Developer 💻'}
+  50% { content :'  Cricketer 🏏'}
+  100% { content: '  Freelancer 👨🏻‍💻'}
+}
+@keyframes wave-animation {
+  0%{
+    transform: rotate(0deg);
+  }
+  7% {
+    transform: rotate(14deg);
+  }
+  14% {
+    transform: rotate(-8deg);
+  }
+  21% {
+    transform: rotate(14deg);
+  }
+  28% {
+    transform: rotate(-4deg);
+  }
+  35% {
+    transform: rotate(10deg);
+  }
+  42% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+.para{
+  margin-left: 0.875rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #6B7280;
+}
+
+.link{
+  margin-left: 0.875rem;
+  align-items: center;
+  font-weight: 500;
+  color: #1F2937;
+
+}
+.name{
+  margin-left: 0.875rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
